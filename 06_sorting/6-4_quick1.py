@@ -8,7 +8,7 @@ def quick_sorting1(array, start, end):
     left = start + 1 # 시작 인덱스는 두번째 인덱스
     right = end # 끝 인덱스는 마지막 인덱스
 
-    while left <= right:
+    while left <= right: # left와 right가 완전 교차하지 않고 일치하는 케이스에 대해서도 아래 프로세스 진행시켜야 함.
         while left <= end and array[left] <= array[pivot]: 
             left += 1 # array[left] > array[pivot] 찾을 때까지 왼쪽의 인덱스는 1씩 증가시킴!
         while right > start and array[right] >= array[pivot]:

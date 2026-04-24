@@ -1,0 +1,18 @@
+# n = int(input())
+n = 2
+
+array = []
+# for each in range(n):
+#     array.append(tuple((input().split())))
+array.append(
+    ('홍길동', 95)
+)
+array.append(
+    ('이순신', 77)
+)
+
+# print(array)
+
+array.sort(key=lambda x: x[1])
+for each in array:
+    print(each[0], end=' ')

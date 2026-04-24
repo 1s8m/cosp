@@ -1,0 +1,14 @@
+# n = int(input())
+n = 3
+
+# array = []
+# for each in range(n):
+#     array.append(int(input()))
+array = [15, 27, 12]
+
+# print(array)
+
+array.sort(reverse=True)
+
+for each in array:
+    print(each, end=' ')

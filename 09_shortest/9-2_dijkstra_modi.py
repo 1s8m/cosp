@@ -4,9 +4,9 @@ INF = int(1e9)
 
 n, m = 6, 11
 start_node = 1
-# graph = [[] * (n+1)] # 모든 원소가 열결되어 정의되는 걸 바라지 않는다. index 별 원소의 영향이 없도록 정의 필요.
+# graph = [[] * (n+1)] # [[]] 이렇게만 정의됨
 graph = [[] for _ in range(n+1)] 
-visited = [False] * (n+1)
+# visited = [False] * (n+1)
 distance = [INF] * (n+1)
 
 graph[1].append([2, 2])
@@ -49,7 +49,7 @@ def dijkstra(start):
         # visited[now] = True
         dist, now = heapq.heappop(q)
 
-        if distance[now] < dist: continue # now 노드를 이미 처리한 적이 있다면
+        if distance[now] < dist: continue # now 노드를 이미 처리한 적이 있다면 (INF 와 비교라 등호 의미가 없을 듯..)
 
         # for d in graph[now]:
         for d in graph[now]:

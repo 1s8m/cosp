@@ -4,7 +4,7 @@ INF = int(1e9)
 
 n, m = 6, 11
 start_node = 1
-# graph = [[] * (n+1)] # 모든 원소가 열결되어 정의되는 걸 바라지 않는다. index 별 원소의 영향이 없도록 정의 필요.
+# graph = [[] * (n+1)] # [[]] 이렇게만 정의됨
 graph = [[] for _ in range(n+1)] 
 visited = [False] * (n+1)
 distance = [INF] * (n+1)
